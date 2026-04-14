@@ -60,7 +60,7 @@ packets_captured_total{interface="ens256",type="all"} 30
 Link to [dashboard](https://grafana.com/grafana/dashboards/13513)
 
 Screenshot:
-![screenshot](https://github.com/mrizvic/dhcpmessage_exporter/blob/main/grafana-dhcpmessages-dashboard.png)
+![screenshot](https://github.com/jumpswitch/dhcpmessage_exporter/blob/main/grafana-dhcpmessages-dashboard.png)
 
 
 # Command line interface
@@ -115,7 +115,7 @@ Create  systemd unit:
 cat > /etc/systemd/system/dhcpmessage_exporter.service<<EOF
 [Unit]                             
 Description=capture dhcp messages, count by message type and export for prometheus
-Documentation=https://github.com/mrizvic/dhcpmessage_exporter
+Documentation=https://github.com/jumpswitch/dhcpmessage_exporter
 Wants=network-online.target
 After=network-online.target
 
@@ -147,7 +147,7 @@ sudo systemctl status dhcpmessage_exporter.service
 ● dhcpmessage_exporter.service - dhcp message sniffer and counter for prometheus
    Loaded: loaded (/etc/systemd/system/dhcpmessage_exporter.service; disabled; vendor preset: disabled)
    Active: active (running) since Fri 2020-12-04 17:47:09 CET; 31min ago
-     Docs: https://github.com/mrizvic/dhcpmessage_exporter
+     Docs: https://github.com/jumpswitch/dhcpmessage_exporter
  Main PID: 14378 (dhcpmessage_exp)
     Tasks: 10 (limit: 23583)
    Memory: 16.4M
